@@ -1,0 +1,39 @@
+<html>
+    <head>
+        
+        <script src="p5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+        <script src ="jumper.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var jumper = new jumper();//declarE object
+ 
+            function setup() {
+                createCanvas(w,h);
+            }
+
+            function draw() {
+                clear(); //clear canvas every time
+                jumper.show(); //load show
+                jumper.update(); //load update
+            }
+
+            function keyPressed() {
+                if (keyCode ===  32) {
+                    jumper.up();
+                }
+            }
+        </script>
+    </body>
+</html>
